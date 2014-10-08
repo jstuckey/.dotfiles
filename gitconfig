@@ -1,0 +1,35 @@
+[alias]
+  st = status . -sb
+  ci = commit
+  co = checkout
+  br = branch
+  cb = rev-parse --abbrev-ref HEAD
+  pr = "!open http://code.livingsocial.net/`git config user.name`/pipeline/compare/`git rev-parse --abbrev-ref HEAD`?expand=1"
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  conflicts = diff --name-only --diff-filter=U
+  recent = "!git for-each-ref --sort=-committerdate refs/heads/ | sed s/.*refs\\\\/heads\\\\/// | head"
+  dl2 = diff HEAD^ HEAD
+[color]
+  ui = 1
+[color "diff"]
+  plain  = white
+  meta   = yellow
+  old    = red
+  new    = green
+  frag   = cyan
+  func   = cyan
+  commit = cyan ul
+  whitespace = red reverse
+[color "branch"]
+  current = yellow
+[color "status"]
+  added     = yellow
+  changed   = magenta
+  untracked = cyan
+  header    = white
+  branch    = blue
+[core]
+  editor = vim
+[user]
+  name = jstuckey
+  email = jeremy.stuckey@livingsocial.com
