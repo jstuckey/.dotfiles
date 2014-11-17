@@ -1,4 +1,4 @@
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH:/usr/local/sbin"
 eval "$(rbenv init -)"
 
 export EDITOR=vim
