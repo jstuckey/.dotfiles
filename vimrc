@@ -1,6 +1,7 @@
 execute pathogen#infect()
 filetype plugin indent on
 
+set columns=80
 set number
 syntax on
 colorscheme vividchalk

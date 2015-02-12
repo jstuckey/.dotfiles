@@ -16,7 +16,7 @@ alias restart="exec /bin/bash -l"
 alias g="git"
 alias test="bundle exec ruby -I test"
 alias prod="ssh jstuckey@app-shell01.iad.livingsocial.net"
-alias racoon="sudo launchctl stop com.apple.racoon && dscacheutil -flushcache && sudo killall -HUP mDNSResponder && sudo launchctl start com.apple.racoon"
+alias racoon="sudo launchctl stop com.apple.racoon ; sudo discoveryutil mdnsflushcache ; sudo discoveryutil udnsflushcaches ; sudo launchctl start com.apple.racoon"
 alias bgm='BUNDLE_GEMFILE="./Gemfile.mine"'
 alias bashpro='vim ~/.bash_profile'
 alias gitcon='vim ~/.gitconfig'
