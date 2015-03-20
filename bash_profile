@@ -21,6 +21,7 @@ alias bgm='BUNDLE_GEMFILE="./Gemfile.mine"'
 alias bashpro='vim ~/.bash_profile'
 alias gitcon='vim ~/.gitconfig'
 alias vimrc='vim ~/.vimrc'
+alias db='mysql -u root deals_development'
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
