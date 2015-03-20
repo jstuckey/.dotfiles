@@ -27,6 +27,11 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+nmap , <C-w><C-w>
+
+" Copy full file path to unnamed register
+nmap cp :let @" = expand("%:p")
+
 
 function! TrimWhiteSpace()
     %s/\s\+$//e
