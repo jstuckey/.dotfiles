@@ -4,7 +4,8 @@ filetype plugin indent on
 set columns=80
 set number
 syntax on
-colorscheme vividchalk
+colorscheme molokai
+let g:rehash256 = 1 " For 256 color version of molokai
 set autoread
 set showmatch
 set visualbell
@@ -20,6 +21,7 @@ set ignorecase " Ignore case when searching
 set smartcase " Ignore case when searching lowercase
 set hlsearch  " highlight search
 set incsearch
+set cursorline
 
 imap jj <ESC>
 nmap ; :
