@@ -31,6 +31,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 nmap , <C-w><C-w>
 
+cmap nerd NERDTree
+
 " Copy full file path to unnamed register
 nmap cp :let @" = expand("%:p")
 
