@@ -41,7 +41,7 @@ cmap nerd NERDTree
 highlight NonText guibg=#2D2D2D
 
 " Copy full file path to unnamed register
-nmap cp :let @" = expand("%:p")
+nmap cp :let @* = expand("%:p")
 
 function! TrimWhiteSpace()
     %s/\s\+$//e
