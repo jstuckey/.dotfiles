@@ -23,6 +23,7 @@ set smartcase " Ignore case when searching lowercase
 set hlsearch  " highlight search
 set incsearch
 set cursorline
+set nowrap
 
 imap jj <ESC>
 nmap ; :
