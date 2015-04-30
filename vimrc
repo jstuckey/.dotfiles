@@ -34,7 +34,7 @@ map <C-l> <C-W>l
 nmap , <C-w><C-w>
 
 " Insert line without staying in insert mode
-nmap <C-o> o<Esc>k
+"nmap <C-o> o<Esc>k
 "nmap <C-S-o> O<Esc>j
 
 cmap nerd NERDTree
