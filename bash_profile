@@ -23,6 +23,7 @@ alias bashpro='vim ~/.bash_profile'
 alias gitcon='vim ~/.gitconfig'
 alias vimrc='vim ~/.vimrc'
 alias db='mysql -u root deals_development'
+alias be='bundle exec'
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
