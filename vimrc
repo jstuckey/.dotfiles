@@ -24,6 +24,8 @@ set hlsearch  " highlight search
 set incsearch
 set cursorline
 set nowrap
+set splitbelow
+set splitright
 
 imap jj <ESC>
 "nmap ; :
