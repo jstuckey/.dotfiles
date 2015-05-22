@@ -35,6 +35,9 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 nmap , <C-w><C-w>
 
+" Ruby string interpolation
+imap # #{}<ESC>i
+
 " Insert line without staying in insert mode
 "nmap <C-o> o<Esc>k
 "nmap <C-S-o> O<Esc>j
