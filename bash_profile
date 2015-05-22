@@ -25,6 +25,7 @@ alias gitcon='vim ~/.gitconfig'
 alias vimrc='vim ~/.vimrc'
 alias db='mysql -u root deals_development'
 alias be='bundle exec'
+alias mvim='open -a MacVim .'
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
