@@ -24,8 +24,13 @@ alias bashpro='vim ~/.bash_profile'
 alias gitcon='vim ~/.gitconfig'
 alias vimrc='vim ~/.vimrc'
 alias db='mysql -u root deals_development'
+alias dbt='mysql -u root pipeline_test'
 alias be='bundle exec'
+alias ber='bundle exec rake'
+alias bertu='bundle exec rake test:units'
 alias mvim='open -a MacVim .'
+alias gcob='git checkout -b'
+alias gp='git push origin `g cb` && git pr'
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
