@@ -51,3 +51,6 @@ function! TrimWhiteSpace()
 endfunction
 autocmd BufWritePre * :call TrimWhiteSpace()
 autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" Add spell checking for git commits
+autocmd Filetype gitcommit setlocal spell
