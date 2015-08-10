@@ -3,6 +3,8 @@ eval "$(rbenv init -)"
 
 export EDITOR=vim
 
+export CLICOLOR=1
+
 # REE for LivingSocial
 export RUBY_HEAP_FREE_MIN=1024
 export RUBY_GC_HEAP_INIT_SLOTS=4000000
@@ -12,7 +14,6 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 
 # Aliases
 alias ll="ls -lahL"
-export CLICOLOR=1
 alias restart="exec /bin/bash -l"
 alias g="git"
 alias test="bundle exec ruby -I test"
