@@ -39,7 +39,11 @@ cmap nerd NERDTree
 
 " Set background color of the unused text area at end of file
 highlight NonText guibg=#2D2D2D
+
+" Set color of active status line
 highlight StatusLine guifg=#F62D73 guibg=#FFFFFF
+highlight StatusLine ctermfg=13 ctermbg=15
+
 " #6BD9E9  #F62D73  #AF85FC  #A7E040  #FB912D
 "highlight StatusLineNC    ctermfg=244 ctermbg=232
 
