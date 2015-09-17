@@ -88,7 +88,7 @@ if has("spell")
     hi SpellRare   guisp=#FFFFFF gui=undercurl
 endif
 hi Statement       guifg=#F92672               gui=bold
-hi StatusLine      guifg=#455354 guibg=fg
+hi StatusLine      guifg=#F62D73 guibg=#FFFFFF
 hi StatusLineNC    guifg=#808080 guibg=#080808
 hi StorageClass    guifg=#FD971F               gui=italic
 hi Structure       guifg=#66D9EF
@@ -117,7 +117,7 @@ if s:molokai_original == 1
    hi CursorColumn                  guibg=#3E3D32
    hi ColorColumn                   guibg=#3B3A32
    hi LineNr          guifg=#BCBCBC guibg=#3B3A32
-   hi NonText         guifg=#75715E
+   hi NonText         guifg=#75715E guibg=#2D2D2D
    hi SpecialKey      guifg=#75715E
 else
    hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
@@ -127,7 +127,7 @@ else
    hi CursorColumn                  guibg=#293739
    hi ColorColumn                   guibg=#232526
    hi LineNr          guifg=#465457 guibg=#232526
-   hi NonText         guifg=#465457
+   hi NonText         guifg=#465457 guibg=#2D2D2D
    hi SpecialKey      guifg=#465457
 end
 
@@ -206,7 +206,7 @@ if &t_Co > 255
        hi SpellRare  ctermfg=none ctermbg=none  cterm=reverse
    endif
    hi Statement       ctermfg=161               cterm=bold
-   hi StatusLine      ctermfg=238 ctermbg=253
+   hi StatusLine      ctermfg=13  ctermbg=15
    hi StatusLineNC    ctermfg=244 ctermbg=232
    hi StorageClass    ctermfg=208
    hi Structure       ctermfg=81
@@ -228,7 +228,7 @@ if &t_Co > 255
    hi CursorColumn                ctermbg=236
    hi ColorColumn                 ctermbg=236
    hi LineNr          ctermfg=250 ctermbg=236
-   hi NonText         ctermfg=59
+   hi NonText         ctermfg=59  ctermbg=234
 
    hi SpecialKey      ctermfg=59
 
@@ -266,7 +266,7 @@ if &t_Co > 255
 
        hi Comment         ctermfg=244
        hi LineNr          ctermfg=239 ctermbg=235
-       hi NonText         ctermfg=239
+       hi NonText         ctermfg=239 ctermbg=234
        hi SpecialKey      ctermfg=239
    endif
 end
