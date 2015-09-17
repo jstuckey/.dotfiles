@@ -40,6 +40,9 @@ cmap nerd NERDTree
 " Copy full file path to unnamed register
 nmap cp :let @* = expand("%:p")
 
+" Re-wrap entire file
+command Wrap normal gggqGgg
+
 function! TrimWhiteSpace()
     %s/\s\+$//e
 endfunction
