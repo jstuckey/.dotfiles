@@ -37,7 +37,7 @@ cmap nerd NERDTree
 nmap cp :let @* = expand("%:p")
 
 " Re-wrap entire file
-command! Wrap normal mwgggqGgg
+command! Wrap normal mwgggqG`w
 
 " Trip all trailing whitespace before writing buffer
 function! TrimWhiteSpace()
