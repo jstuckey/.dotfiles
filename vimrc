@@ -51,3 +51,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " Add spell checking for git commits
 autocmd Filetype gitcommit setlocal spell
+
+" Add matchit plugin
+runtime macros/matchit.vim
