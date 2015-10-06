@@ -5,8 +5,8 @@ filetype plugin indent on
 set columns=80
 set number
 syntax on
-colorscheme molokai
 let g:rehash256 = 1 " For 256 color version of molokai
+colorscheme molokai
 set autoread
 set showmatch
 set visualbell
