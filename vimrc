@@ -37,7 +37,7 @@ cmap nerd NERDTree
 nmap cp :let @* = expand("%:p")
 
 " Re-wrap entire file
-"command Wrap normal gggqGgg
+command! Wrap normal mwgggqGgg
 
 " Trip all trailing whitespace before writing buffer
 function! TrimWhiteSpace()
@@ -55,5 +55,5 @@ autocmd Filetype gitcommit setlocal spell
 runtime macros/matchit.vim
 
 " Fix window columns for various monitors
-command ColThunder set columns=231
-command ColiMac    set columns=173
+command! ColThunder set columns=231
+command! ColiMac    set columns=173
