@@ -53,3 +53,7 @@ autocmd Filetype gitcommit setlocal spell
 
 " Add matchit plugin
 runtime macros/matchit.vim
+
+" Fix window columns for various monitors
+command ColThunder set columns=231
+command ColiMac    set columns=173
