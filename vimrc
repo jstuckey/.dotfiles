@@ -1,3 +1,4 @@
+" Setup for pathogen plugin manager
 execute pathogen#infect()
 filetype plugin indent on
 
@@ -28,11 +29,6 @@ set splitbelow
 set splitright
 
 imap jj <ESC>
-"nmap ; :
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 nmap , <C-w><C-w>
 
 cmap nerd NERDTree
@@ -41,13 +37,16 @@ cmap nerd NERDTree
 nmap cp :let @* = expand("%:p")
 
 " Re-wrap entire file
-command Wrap normal gggqGgg
+"command Wrap normal gggqGgg
 
+" Trip all trailing whitespace before writing buffer
 function! TrimWhiteSpace()
     %s/\s\+$//e
 endfunction
 autocmd BufWritePre * :call TrimWhiteSpace()
-autocmd! bufwritepost .vimrc source ~/.vimrc
+
+" Reload vimrc after writing to vimrc
+autocmd! BufWritePost .vimrc source ~/.vimrc
 
 " Add spell checking for git commits
 autocmd Filetype gitcommit setlocal spell
