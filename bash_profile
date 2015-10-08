@@ -36,6 +36,9 @@ alias gp='git push origin `g cb` && git pr'
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
+# git tab completion
+source ~/.git-completion.bash
+
 # Prompt
 git_branch='`git rev-parse --abbrev-ref HEAD 2> /dev/null | sed s/^/\ \|\ /`'
 emojis=(🐶 🐺 🐱 🐭 🐹 🐰 🐸 🐯 🐨 🐻 🐷 🐮 🐵 🐼 🐧 🐍 🐢 🐙 🐠 🐳 🐬 🐥)
