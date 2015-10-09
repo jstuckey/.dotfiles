@@ -32,6 +32,7 @@ alias bertu='bundle exec rake test:units'
 alias mvim='open -a MacVim .'
 alias gcob='git checkout -b'
 alias gp='git push origin `g cb` && git pr'
+alias vimprune='(find . -name .*.swp -print0 | xargs -0 rm) && (find . -name .*.swo -print0 | xargs -0 rm)'
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
