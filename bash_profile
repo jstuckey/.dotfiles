@@ -33,6 +33,7 @@ alias mvim='open -a MacVim .'
 alias gcob='git checkout -b'
 alias gp='git push origin `g cb` && git pr'
 alias vimprune='(find . -name .*.swp -print0 | xargs -0 rm) && (find . -name .*.swo -print0 | xargs -0 rm)'
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
