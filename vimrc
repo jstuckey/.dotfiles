@@ -10,12 +10,12 @@ colorscheme molokai
 set autoread
 set showmatch
 set visualbell
+set autoindent
 set smartindent
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
-set autoindent
 set ruler
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -57,3 +57,8 @@ runtime macros/matchit.vim
 " Fix window columns for various monitors
 command! ColThunder set columns=231
 command! ColiMac    set columns=173
+
+" This is so I don't accidentally scroll into oblivion
+" Scrolling sends an up or down command to vim
+nnoremap <up> <nop>
+nnoremap <down> <nop>
