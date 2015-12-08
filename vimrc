@@ -62,3 +62,6 @@ command! ColiMac    set columns=173
 " Scrolling sends an up or down command to vim
 nnoremap <up> <nop>
 nnoremap <down> <nop>
+
+" Yank entire buffer to system clipboard
+command! Yall 0,$y *
