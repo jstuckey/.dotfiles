@@ -2,6 +2,7 @@
   st = status . -sb
   ci = commit
   co = checkout
+  cob = checkout -b
   br = branch
   cb = rev-parse --abbrev-ref HEAD
   pr = "!open http://code.livingsocial.net/`git config user.name`/`pwd | xargs basename`/compare/`git rev-parse --abbrev-ref HEAD`?expand=1 ; say Ship it!"
