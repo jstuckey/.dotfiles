@@ -18,7 +18,7 @@
   meta   = yellow
   old    = red
   new    = green
-  frag   = cyan
+  frag   = magenta
   func   = cyan
   commit = cyan ul
   whitespace = red reverse
