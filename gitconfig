@@ -35,3 +35,5 @@
 [user]
   name = jstuckey
 	email = jeremy.stuckey@livingsocial.com
+[rerere]
+	enabled = true
