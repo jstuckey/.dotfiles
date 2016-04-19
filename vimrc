@@ -57,6 +57,7 @@ runtime macros/matchit.vim
 " Fix window columns for various monitors
 command! ColThunder set columns=231
 command! ColiMac    set columns=173
+command! ColAir     set columns=123
 
 " This is so I don't accidentally scroll into oblivion
 " Scrolling sends an up or down command to vim
