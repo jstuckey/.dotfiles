@@ -5,31 +5,19 @@ export EDITOR=vim
 
 export CLICOLOR=1
 
-# REE for LivingSocial
-export RUBY_HEAP_FREE_MIN=1024
-export RUBY_GC_HEAP_INIT_SLOTS=4000000
-export RUBY_HEAP_SLOTS_INCREMENT=250000
-export RUBY_GC_MALLOC_LIMIT=500000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-
 # Aliases
 alias ll="ls -lahL"
 alias restart="exec /bin/bash -l"
 alias g="git"
 alias test="bundle exec ruby -I test"
-alias ptest="script/run_tests_summary"
-alias prod="ssh jstuckey@app-shell01.iad.livingsocial.net"
 alias racoon="sudo launchctl stop com.apple.racoon ; sudo discoveryutil mdnsflushcache ; sudo discoveryutil udnsflushcaches ; sudo launchctl start com.apple.racoon"
 alias bgm='BUNDLE_GEMFILE="./Gemfile.mine"'
 alias bashpro='vim ~/.bash_profile'
 alias gitcon='vim ~/.gitconfig'
 alias vimrc='vim ~/.vimrc'
-alias db='mysql -u root deals_development'
-alias dbt='mysql -u root pipeline_test'
 alias be='bundle exec'
 alias ber='bundle exec rake'
 alias bertu='bundle exec rake test:units'
-alias bertiom='bundle exec rake test:iom'
 alias mvim='open -a MacVim .'
 alias gp='git push origin `g cb` && git pr'
 alias vimprune='(find . -name .*.swp -print0 | xargs -0 rm) && (find . -name .*.swo -print0 | xargs -0 rm)'
