@@ -33,8 +33,8 @@ nmap , <C-w><C-w>
 
 cmap nerd NERDTree
 
-" Copy full file path to unnamed register
-nmap cp :let @* = expand("%:p")
+" Copy relative file path to unnamed register
+nmap cp :let @* = expand("%:.")
 
 " Re-wrap entire file
 command! Wrap normal mwgggqG`w
