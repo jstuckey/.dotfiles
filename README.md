@@ -9,6 +9,9 @@ ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/vim ~/.vim
 ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 
+# vim plugins
+git submodule update --init
+
 # rbenv
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 cd ~/.rbenv && src/configure && make -C src
