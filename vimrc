@@ -54,10 +54,11 @@ autocmd Filetype gitcommit setlocal spell
 " Add matchit plugin
 runtime macros/matchit.vim
 
-" Fix window columns for various monitors
+" Set columns for various screen sizes
 command! ColThunder set columns=231
 command! ColiMac    set columns=173
 command! ColAir     set columns=123
+command! ColMacBook set columns=127
 
 " This is so I don't accidentally scroll into oblivion
 " Scrolling sends an up or down command to vim
