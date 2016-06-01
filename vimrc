@@ -67,3 +67,5 @@ nnoremap <down> <nop>
 
 " Yank entire buffer to system clipboard
 command! Yall 0,$y *
+
+imap <tab> <C-p>
