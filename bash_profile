@@ -3,6 +3,8 @@ eval "$(rbenv init -)"
 
 export EDITOR=vim
 
+set -o vi
+
 export CLICOLOR=1
 
 # Aliases
