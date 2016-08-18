@@ -2,7 +2,6 @@
 execute pathogen#infect()
 filetype plugin indent on
 
-set columns=80
 set number
 syntax on
 let g:rehash256 = 1 " For 256 color version of molokai
