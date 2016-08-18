@@ -29,7 +29,7 @@ alias gp='git push origin `g cb` && git pr'
 alias vimprune='(find . -name .*.swp -print0 | xargs -0 rm) && (find . -name .*.swo -print0 | xargs -0 rm)'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias cls='git log | head -n 1 | sed "s/commit //" | pbcopy' # Copy last SHA
-alias cop='bundle exec rubocop'
+alias cop='git diff --name-only HEAD develop | xargs bundle exec rubocop'
 alias spec='bin/rspec'
 
 # z
