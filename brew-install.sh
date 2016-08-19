@@ -1,1 +1,1 @@
-brew install ag z pick fzf
+brew install vim ag z pick fzf
