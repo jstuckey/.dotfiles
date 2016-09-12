@@ -31,6 +31,7 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias cls='git log | head -n 1 | sed "s/commit //" | pbcopy' # Copy last SHA
 alias cop='git diff --name-only HEAD develop | xargs bundle exec rubocop'
 alias spec='bin/rspec'
+alias pickbr='git branch | pick | xargs git checkout'
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
