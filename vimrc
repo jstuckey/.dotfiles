@@ -33,6 +33,8 @@ set cursorline
 set nowrap
 set splitbelow
 set splitright
+set breakindent
+set emoji
 
 """"""""""
 " Remaps "
