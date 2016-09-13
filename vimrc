@@ -50,8 +50,8 @@ nmap <Leader>c :let @* = expand("%:.")<CR>
 
 " This is so I don't accidentally scroll into oblivion
 " Scrolling sends an up or down command to vim
-nnoremap <up> <nop>
-nnoremap <down> <nop>
+nmap <up> <nop>
+nmap <down> <nop>
 
 nmap <Leader>t :tabedit<CR>
 
