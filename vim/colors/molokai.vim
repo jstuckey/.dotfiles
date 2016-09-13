@@ -232,6 +232,10 @@ if &t_Co > 255
 
    hi SpecialKey      ctermfg=59
 
+   hi TabLine         ctermfg=15  ctermbg=242
+   hi TabLineSel      ctermfg=15  ctermbg=234
+   hi TabLineFill     ctermfg=242
+
    if exists("g:rehash256") && g:rehash256 == 1
        hi Normal       ctermfg=252 ctermbg=234
        hi CursorLine               ctermbg=237   cterm=none
