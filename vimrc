@@ -39,18 +39,21 @@ set emoji
 """"""""""
 " Remaps "
 """"""""""
+let mapleader=" "
+
 imap jj <ESC>
 nmap , <C-w><C-w>
 imap <tab> <C-p>
-cmap nerd NERDTree
 
 " Copy relative file path to unnamed register
-nmap cp :let @* = expand("%:.")
+nmap <Leader>c :let @* = expand("%:.")<CR>
 
 " This is so I don't accidentally scroll into oblivion
 " Scrolling sends an up or down command to vim
 nnoremap <up> <nop>
 nnoremap <down> <nop>
+
+nmap <Leader>t :tabedit<CR>
 
 """"""""""""
 " Commands "
@@ -86,6 +89,9 @@ command! Yall 0,$y *
 
 " FZF fuzzy finding
 set rtp+=/usr/local/opt/fzf
+nmap <Leader>f :FZF<CR>
 
 " Add matchit plugin
 runtime macros/matchit.vim
+
+nmap <Leader>n :NERDTree<CR>
