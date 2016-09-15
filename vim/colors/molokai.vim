@@ -211,7 +211,7 @@ if &t_Co > 255
    hi StorageClass    ctermfg=208
    hi Structure       ctermfg=81
    hi Tag             ctermfg=161
-   hi Title           ctermfg=166
+   hi Title           ctermfg=15
    hi Todo            ctermfg=231 ctermbg=232   cterm=bold
 
    hi Typedef         ctermfg=81
@@ -232,8 +232,8 @@ if &t_Co > 255
 
    hi SpecialKey      ctermfg=59
 
-   hi TabLine         ctermfg=15  ctermbg=242  cterm=none
-   hi TabLineSel      ctermfg=15  ctermbg=234  cterm=bold
+   hi TabLine         ctermfg=15   ctermbg=242  cterm=none
+   hi TabLineSel      ctermfg=208  ctermbg=234  cterm=none
    hi TabLineFill     ctermfg=242
 
    if exists("g:rehash256") && g:rehash256 == 1
@@ -265,7 +265,6 @@ if &t_Co > 255
 
        hi Statement       ctermfg=197               cterm=bold
        hi Tag             ctermfg=197
-       hi Title           ctermfg=203
        hi Visual                      ctermbg=238
 
        hi Comment         ctermfg=244
