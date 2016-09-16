@@ -73,8 +73,8 @@ if has("spell")
 endif
 hi String          ctermfg=222
 hi Statement       ctermfg=197                 cterm=bold
-hi StatusLine      ctermfg=234   ctermbg=208   cterm=bold
-hi StatusLineNC    ctermfg=244   ctermbg=232
+hi StatusLine      ctermfg=15    ctermbg=244   cterm=bold
+hi StatusLineNC    ctermfg=234   ctermbg=244   cterm=none
 hi StorageClass    ctermfg=208
 hi Structure       ctermfg=81
 hi TabLine         ctermfg=15    ctermbg=242   cterm=none
