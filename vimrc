@@ -6,8 +6,7 @@ filetype plugin indent on
 " Colors "
 """"""""""
 syntax on
-let g:rehash256 = 1 " For 256 color version of molokai
-colorscheme molokai
+colorscheme jerokai
 
 """""""""""
 " Options "
