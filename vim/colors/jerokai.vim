@@ -16,8 +16,8 @@ hi Boolean         ctermfg=141
 hi Character       ctermfg=222
 hi ColorColumn     ctermbg=236
 hi Comment         ctermfg=244
-hi Conditional     ctermfg=197                 cterm=bold
-hi Constant        ctermfg=141                 cterm=bold
+hi Conditional     ctermfg=197                 cterm=none
+hi Constant        ctermfg=141                 cterm=none
 hi CursorColumn    ctermbg=236
 hi CursorLine      ctermbg=237   cterm=none
 hi CursorLineNr    ctermfg=208                 cterm=none
@@ -37,10 +37,10 @@ hi Float           ctermfg=141
 hi Folded          ctermfg=67    ctermbg=16
 hi FoldColumn      ctermfg=67    ctermbg=16
 hi Function        ctermfg=154
-hi Identifier      ctermfg=208
+hi Identifier      ctermfg=208                 cterm=none
 hi Ignore          ctermfg=244   ctermbg=232
 hi IncSearch       ctermfg=193   ctermbg=16
-hi Keyword         ctermfg=197                 cterm=bold
+hi Keyword         ctermfg=197                 cterm=none
 hi Label           ctermfg=229                 cterm=none
 hi LineNr          ctermfg=245   ctermbg=237
 hi Macro           ctermfg=193
@@ -59,7 +59,7 @@ hi PreCondit       ctermfg=154                 cterm=bold
 hi PreProc         ctermfg=154
 hi Question        ctermfg=81
 hi Repeat          ctermfg=197                 cterm=bold
-hi Search          ctermfg=0     ctermbg=222   cterm=NONE
+hi Search          ctermfg=0     ctermbg=222   cterm=none
 hi SignColumn      ctermfg=118   ctermbg=235
 hi SpecialChar     ctermfg=161                 cterm=bold
 hi SpecialComment  ctermfg=245                 cterm=bold
