@@ -72,7 +72,7 @@ if has("spell")
   hi SpellRare     ctermfg=none  ctermbg=none  cterm=reverse
 endif
 hi String          ctermfg=222
-hi Statement       ctermfg=197                 cterm=bold
+hi Statement       ctermfg=197                 cterm=none
 hi StatusLine      ctermfg=15    ctermbg=244   cterm=bold
 hi StatusLineNC    ctermfg=234   ctermbg=244   cterm=none
 hi StorageClass    ctermfg=208
