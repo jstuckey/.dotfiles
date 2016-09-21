@@ -54,6 +54,9 @@ nnoremap <down> <nop>
 
 nmap <Leader>t :tabedit<CR>
 
+nmap <Leader>y "*yw
+nmap <Leader>yy "*yy
+
 """"""""""""
 " Commands "
 """"""""""""
