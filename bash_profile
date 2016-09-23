@@ -46,9 +46,16 @@ emoji='`echo ${emojis[$RANDOM % 26]}`'
 PS1="\[\033[0;36m\]\T | \W$git_branch | $emoji  > \[\e[0m\]"
 
 
+# Old welcome
+#echo -e "  🐻        🐨        🐼 "
+#echo -e "\033[0;31m\n  --------------------"
+#echo -e "\033[0;31m  - \033[0;36mWelcome, Jeremy! \033[0;31m-"
+#echo -e "\033[0;31m  --------------------\n"
+#echo -e "  🐶        🐭        🐱 "
+
 # Welcome
-echo -e "  🐻        🐨        🐼 "
-echo -e "\033[0;31m\n  --------------------"
-echo -e "\033[0;31m  - \033[0;36mWelcome, Jeremy! \033[0;31m-"
-echo -e "\033[0;31m  --------------------\n"
-echo -e "  🐶        🐭        🐱 "
+echo -e ""
+echo -e "\033[0;31m (╯°□°）╯\033[1;33m ︵ \033[0;36m¡ʎɯǝɹǝſ 'ǝɯoɔlǝM"
+echo -e ""
+echo -e "             Welcome, Jeremy!\033[0;37m ノ(º_ºノ)"
+echo -e ""
