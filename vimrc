@@ -97,3 +97,5 @@ nmap <Leader>f :FZF<CR>
 runtime macros/matchit.vim
 
 nmap <Leader>n :NERDTree<CR>
+
+call camelcasemotion#CreateMotionMappings('<leader>')
