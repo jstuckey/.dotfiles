@@ -43,7 +43,7 @@ source ~/.git-completion.bash
 git_branch='`git rev-parse --abbrev-ref HEAD 2> /dev/null | sed s/^/\ \|\ /`'
 emojis=(🐶 🐺 🐱 🐭 🐹 🐰 🐸 🐯 🐨 🐻 🐷 🐮 🐵 🐼 🐧 🐍 🐢 🐙 🐠 🐳 🐬 🐥 🦁 🦀 🐝 🐛)
 emoji='`echo ${emojis[$RANDOM % 26]}`'
-PS1="\[\033[0;36m\]\T | \W$git_branch | $emoji  > \[\e[0m\]"
+PS1="\[\033[0;36m\]\W$git_branch | $emoji  > \[\e[0m\]"
 
 
 # Old welcome
