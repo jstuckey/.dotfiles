@@ -57,6 +57,9 @@ nmap <Leader>t :tabedit<CR>
 nmap <Leader>y "*yw
 nmap <Leader>yy "*yy
 
+nmap <Leader>r :set relativenumber<CR>
+nmap <Leader>R :set norelativenumber<CR>
+
 """"""""""""
 " Commands "
 """"""""""""
