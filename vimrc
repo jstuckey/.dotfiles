@@ -35,6 +35,7 @@ set splitright
 set breakindent
 set emoji
 set wildmenu
+set relativenumber
 
 """"""""""
 " Remaps "
