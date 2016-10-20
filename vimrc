@@ -34,6 +34,7 @@ set splitbelow
 set splitright
 set breakindent
 set emoji
+set wildmenu
 
 """"""""""
 " Remaps "

@@ -90,7 +90,7 @@ hi VertSplit       ctermfg=244   ctermbg=232   cterm=bold
 hi Visual                        ctermbg=238
 hi VisualNOS                     ctermbg=238
 hi WarningMsg      ctermfg=231   ctermbg=238   cterm=bold
-hi WildMenu        ctermfg=81    ctermbg=16
+hi WildMenu        ctermfg=208   ctermbg=234
 
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
