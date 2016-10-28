@@ -1,1 +1,1 @@
-brew install vim ag z pick fzf ctags
+brew install vim ag z pick fzf ctags less
