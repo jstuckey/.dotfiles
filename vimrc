@@ -62,6 +62,9 @@ nmap <Leader>yy "*yy
 nmap <Leader>r :set relativenumber<CR>
 nmap <Leader>R :set norelativenumber<CR>
 
+" Search for visual selection
+vnoremap * y/<C-R>"<CR>
+
 """"""""""""
 " Commands "
 """"""""""""
