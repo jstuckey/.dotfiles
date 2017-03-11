@@ -36,6 +36,7 @@ set breakindent
 set emoji
 set wildmenu
 set relativenumber
+set fixendofline
 
 """"""""""
 " Remaps "
