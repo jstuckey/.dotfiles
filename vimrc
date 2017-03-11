@@ -84,6 +84,10 @@ autocmd! BufWritePost .vimrc source ~/.vimrc
 " Add spell checking for git commits
 autocmd Filetype gitcommit setlocal spell
 
+set colorcolumn=81
+"let &colorcolumn=join(range(81,999),",")
+"let &colorcolumn="81,".join(range(100,999),",")
+
 " Set columns for various screen sizes
 command! ColThunder set columns=231
 command! ColiMac    set columns=173

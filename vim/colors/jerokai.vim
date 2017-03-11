@@ -14,7 +14,7 @@ let g:colors_name="jerokai"
 "
 hi Boolean         ctermfg=141
 hi Character       ctermfg=222
-hi ColorColumn     ctermbg=236
+hi ColorColumn     ctermbg=235
 hi Comment         ctermfg=244
 hi Conditional     ctermfg=197                 cterm=none
 hi Constant        ctermfg=141                 cterm=none
