@@ -32,6 +32,14 @@ alias cls='git log | head -n 1 | sed "s/commit //" | pbcopy' # Copy last SHA
 alias cop='git diff --name-only HEAD develop | xargs bundle exec rubocop'
 alias spec='bin/rspec'
 alias pickbr='git branch | pick | xargs git checkout'
+alias conflicts='vim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
+
+# Functions
+
+# Search for files containing a term in a Rails directory and open those files in Vim's args list
+agvim() {
+  vim $(ag $1 -l --ignore bin/ --ignore db --ignore log | tr "\n" " ")
+}
 
 # z
 . `brew --prefix`/etc/profile.d/z.sh
