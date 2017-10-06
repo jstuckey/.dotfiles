@@ -44,7 +44,7 @@ let mapleader=" "
 
 imap jj <ESC>
 nmap , <C-w><C-w>
-imap <tab> <C-p>
+imap <tab> <C-n>
 
 " Copy relative file path to unnamed register
 nmap <Leader>c :let @* = expand("%:.")<CR>
