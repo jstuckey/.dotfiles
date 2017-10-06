@@ -114,4 +114,11 @@ runtime macros/matchit.vim
 
 nmap <Leader>n :NERDTree<CR>
 
+augroup VimCSS3Syntax
+  autocmd!
+
+  autocmd FileType css setlocal iskeyword+=-
+  autocmd FileType scss setlocal iskeyword+=-
+augroup END
+
 call camelcasemotion#CreateMotionMappings('<leader>')
