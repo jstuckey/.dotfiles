@@ -25,3 +25,12 @@
 [submodule "vim/bundle/rspec.vim"]
 	path = vim/bundle/rspec.vim
 	url = https://github.com/Keithbsmiley/rspec.vim.git
+[submodule "vim/bundle/--force"]
+	path = vim/bundle/--force
+	url = https://github.com/Keithbsmiley/rspec.vim.git
+[submodule "vim/bundle/vim-css3-syntax"]
+	path = vim/bundle/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "vim/bundle/vim-elixir"]
+	path = vim/bundle/vim-elixir
+	url = https://github.com/elixir-lang/vim-elixir.git
