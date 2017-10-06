@@ -37,7 +37,7 @@ alias conflicts='vim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
 
 # Search for files containing a term in a Rails directory and open those files in Vim's args list
 agvim() {
-  vim $(ag $1 -l --ignore bin/ --ignore db --ignore log | tr "\n" " ")
+  vim $((ag $1 -l --ignore bin/ --ignore db --ignore log) | tr "\n" " ")
 }
 
 # z
