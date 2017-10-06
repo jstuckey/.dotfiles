@@ -122,3 +122,8 @@ augroup VimCSS3Syntax
 augroup END
 
 call camelcasemotion#CreateMotionMappings('<leader>')
+
+"""""""""""""""
+" Autocorrect "
+"""""""""""""""
+iab credentails credentials
