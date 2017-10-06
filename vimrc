@@ -64,6 +64,7 @@ nmap <Leader>R :set norelativenumber<CR>
 
 " Search for visual selection
 vnoremap * y/<C-R>"<CR>
+vnoremap # y/<C-R>"<CR>
 
 " Repeat command in visual mode
 vnoremap . :normal.<CR>
