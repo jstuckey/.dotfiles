@@ -45,7 +45,7 @@ let mapleader=" "
 
 imap jj <ESC>
 nmap , <C-w><C-w>
-imap <tab> <C-p>
+imap <tab> <C-n>
 
 " Copy relative file path to unnamed register
 nmap <Leader>c :let @* = expand("%:.")<CR>
@@ -67,6 +67,7 @@ nmap <Leader>R :set norelativenumber<CR>
 
 " Search for visual selection
 vnoremap * y/<C-R>"<CR>
+vnoremap # y/<C-R>"<CR>
 
 " Repeat command in visual mode
 vnoremap . :normal.<CR>
@@ -116,4 +117,16 @@ runtime macros/matchit.vim
 
 nmap <Leader>n :NERDTree<CR>
 
+augroup VimCSS3Syntax
+  autocmd!
+
+  autocmd FileType css setlocal iskeyword+=-
+  autocmd FileType scss setlocal iskeyword+=-
+augroup END
+
 call camelcasemotion#CreateMotionMappings('<leader>')
+
+"""""""""""""""
+" Autocorrect "
+"""""""""""""""
+iab credentails credentials

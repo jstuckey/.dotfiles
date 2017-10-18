@@ -30,7 +30,6 @@ alias vimprune='(find . -name .*.swp -print0 | xargs -0 rm) && (find . -name .*.
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias cls='git log | head -n 1 | sed "s/commit //" | pbcopy' # Copy last SHA
 alias cop='git diff --name-only HEAD develop | xargs bundle exec rubocop'
-alias spec='bin/rspec'
 alias pickbr='git branch | pick | xargs git checkout'
 alias conflicts='vim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
 
@@ -38,7 +37,7 @@ alias conflicts='vim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
 
 # Search for files containing a term in a Rails directory and open those files in Vim's args list
 agvim() {
-  vim $(ag $1 -l --ignore bin/ --ignore db --ignore log | tr "\n" " ")
+  vim $((ag $1 -l --ignore bin/ --ignore db --ignore log) | tr "\n" " ")
 }
 
 # z
@@ -65,5 +64,5 @@ PS1="\[\033[0;36m\]\W$git_branch | $emoji  > \[\e[0m\]"
 echo -e ""
 echo -e "\033[0;31m (╯°□°）╯\033[1;33m ︵ \033[0;36m¡ʎɯǝɹǝſ 'ǝɯoɔlǝM"
 echo -e ""
-echo -e "             Welcome, Jeremy!\033[0;37m ノ(º_ºノ)"
+echo -e "             Welcome, Jeremy!\033[0;35m ノ(º_ºノ)"
 echo -e ""
