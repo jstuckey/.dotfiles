@@ -37,6 +37,7 @@ set emoji
 set wildmenu
 set relativenumber
 set fixendofline
+set complete=.,w,b,u,i
 
 """"""""""
 " Remaps "
