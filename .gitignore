@@ -1,1 +1,3 @@
 vim/.netrwhist
+*.sw*
+.DS_Store
