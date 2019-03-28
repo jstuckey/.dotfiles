@@ -93,14 +93,6 @@ autocmd! BufWritePost .vimrc source ~/.vimrc
 autocmd Filetype gitcommit setlocal spell
 
 set colorcolumn=81
-"let &colorcolumn=join(range(81,999),",")
-"let &colorcolumn="81,".join(range(100,999),",")
-
-" Set columns for various screen sizes
-command! ColThunder set columns=231
-command! ColiMac    set columns=173
-command! ColAir     set columns=123
-command! ColMacBook set columns=127
 
 " Yank entire buffer to system clipboard
 command! Yall 0,$y *
