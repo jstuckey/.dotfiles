@@ -123,3 +123,4 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 " Autocorrect "
 """""""""""""""
 iab credentails credentials
+iab cateogry category
