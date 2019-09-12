@@ -62,3 +62,8 @@ jsonb
 OrderItem
 postgres
 PostgreSQL
+mockup
+hardcoding
+prometheus
+Kubernetes
+kubernetes
