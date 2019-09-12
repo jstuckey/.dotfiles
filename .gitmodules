@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-rhubarb"]
 	path = vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "vim/bundle/vim-rubyhash"]
+	path = vim/bundle/vim-rubyhash
+	url = git@github.com:rorymckinley/vim-rubyhash.git
