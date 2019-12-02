@@ -5,7 +5,8 @@
   cob = checkout -b
   br = branch
   cb = rev-parse --abbrev-ref HEAD
-  pr = "!open http://github.com/`git config user.name`/`pwd | xargs basename`/compare/`git rev-parse --abbrev-ref HEAD`?expand=1 ; say Ship it!"
+  pr = "!open http://github.com/optoro/`pwd | xargs basename`/compare/`git rev-parse --abbrev-ref HEAD`?expand=1 ; say Ship it!"
+  mr = "!open https://gitlab.com/optoro/developers/`pwd | xargs basename`/merge_requests/new?merge_request%5Bsource_branch%5D=`git rev-parse --abbrev-ref HEAD` ; say Ship it!"
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   conflicts = diff --name-only --diff-filter=U
   recent = "!git for-each-ref --sort=-committerdate refs/heads/ | sed s/.*refs\\\\/heads\\\\/// | head"
@@ -33,6 +34,6 @@
   editor = vim
 [user]
   name = jstuckey
-	email = jeremystuckey@gmail.com
+	email = jstuckey@optoro.com
 [rerere]
 	enabled = true

@@ -44,8 +44,12 @@ agvim() {
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
-# git tab completion
-source ~/.git-completion.bash
+# Bash completion
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+#source $BASH_COMPLETION_COMPAT_DIR/git-completion.bash
+#__git_complete g __git_main
 
 # Prompt
 git_branch='`git rev-parse --abbrev-ref HEAD 2> /dev/null | sed s/^/\ \|\ /`'
@@ -67,3 +71,18 @@ echo -e "\033[0;31m (╯°□°）╯\033[1;33m ︵ \033[0;36m¡ʎɯǝɹǝſ 'ǝ
 echo -e ""
 echo -e "             Welcome, Jeremy!\033[0;35m ノ(º_ºノ)"
 echo -e ""
+
+
+# Triton env variables for work
+export SDC_ACCOUNT=jstuckey
+export SDC_URL=https://api.us-east.optoro.io
+export SDC_KEY_ID=ac:84:28:74:de:8d:91:20:8a:0b:54:9b:3c:a1:48:43
+
+alias dw='hammer exec component development unit_financial_event_writer'
+alias web='bundle exec hammer exec component web -e development'
+alias webbe='bundle exec hammer exec component web -e development bundle exec'
+alias webber='bundle exec hammer exec component web -e development bundle exec rake'
+#alias hammer='bundle exec hammer'
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
