@@ -33,12 +33,32 @@ alias cop='git diff --name-only HEAD develop | xargs bundle exec rubocop'
 alias pickbr='git branch | pick | xargs git checkout'
 alias conflicts='vim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
 alias k='kubectl'
+alias stamp='date -u +%Y.%m.%d.%H.%M.%S'
 
 # Functions
 
 # Search for files containing a term in a Rails directory and open those files in Vim's args list
 agvim() {
   vim $((ag $1 -l --ignore bin/ --ignore db --ignore log) | tr "\n" " ")
+}
+
+kns() {
+  if [[ $1 =~ ^production ]]; then
+    kubectl config use-context prod
+  else
+    kubectl config use-context non-prod
+  fi
+
+  kubectl config set-context --current --namespace="$1"
+}
+
+kbash() {
+  kubectl exec -it $1 bash
+}
+
+kweb() {
+  web="`kubectl get pods | grep ^web | sort -R | head -n 1 |  awk '{print $1}'`"
+  kubectl exec -it $web bash
 }
 
 # z
@@ -67,3 +87,12 @@ echo -e "\033[0;31m (╯°□°）╯\033[1;33m ︵ \033[0;36m¡ʎɯǝɹǝſ 'ǝ
 echo -e ""
 echo -e "             Welcome, Jeremy!\033[0;35m ノ(º_ºノ)"
 echo -e ""
+
+
+# Triton env variables for work
+export SDC_ACCOUNT=jstuckey
+export SDC_URL=https://api.us-east.optoro.io
+export SDC_KEY_ID=ac:84:28:74:de:8d:91:20:8a:0b:54:9b:3c:a1:48:43
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
