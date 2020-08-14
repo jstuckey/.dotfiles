@@ -94,11 +94,5 @@ export SDC_ACCOUNT=jstuckey
 export SDC_URL=https://api.us-east.optoro.io
 export SDC_KEY_ID=ac:84:28:74:de:8d:91:20:8a:0b:54:9b:3c:a1:48:43
 
-alias dw='hammer exec component development unit_financial_event_writer'
-alias web='bundle exec hammer exec component web -e development'
-alias webbe='bundle exec hammer exec component web -e development bundle exec'
-alias webber='bundle exec hammer exec component web -e development bundle exec rake'
-#alias hammer='bundle exec hammer'
-
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
