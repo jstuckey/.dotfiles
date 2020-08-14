@@ -33,6 +33,7 @@ alias cop='git diff --name-only HEAD develop | xargs bundle exec rubocop'
 alias pickbr='git branch | pick | xargs git checkout'
 alias conflicts='vim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
 alias k='kubectl'
+alias stamp='date -u +%Y.%m.%d.%H.%M.%S'
 
 # Functions
 
