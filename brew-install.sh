@@ -1,1 +1,1 @@
-brew install vim ag z pick fzf ctags less
+brew install vim ag z pick fzf ctags less kubectl
