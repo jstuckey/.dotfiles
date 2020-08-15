@@ -70,11 +70,15 @@ kweb() {
 setopt prompt_subst
 
 prompt_basename() {
-  echo $(pwd | xargs basename)
+  basename=$(pwd | xargs basename)
+  echo "$basename | "
 }
 
 prompt_git_branch() {
-  echo $(git rev-parse --abbrev-ref HEAD)
+  branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+  if [ -n "$branch" ]; then
+    echo "$branch | "
+  fi
 }
 
 prompt_random_emoji() {
@@ -82,7 +86,7 @@ prompt_random_emoji() {
   echo ${emojis[$RANDOM % 26]}
 }
 
-PROMPT='%F{cyan}$(prompt_basename) | $(prompt_git_branch) | $(prompt_random_emoji) >  %F{white}'
+PROMPT='%F{cyan}$(prompt_basename)$(prompt_git_branch)$(prompt_random_emoji) >  %F{white}'
 
 # Welcome
 echo -e ""
