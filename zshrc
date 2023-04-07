@@ -59,13 +59,15 @@ openmr() {
 }
 
 kns() {
-  if [[ $1 =~ ^production ]]; then
-    kubectl config use-context prod
-  else
-    kubectl config use-context non-prod
-  fi
-
+  env=`echo $1 | cut -f 1 -d '-'`
+  kubectl config use-context $env
   kubectl config set-context --current --namespace="$1"
+
+  if [ $env = "production" ]; then
+    PROMPT=$PROD_PROMPT
+  else
+    PROMPT=$NON_PROD_PROMPT
+  fi
 }
 
 kbash() {
