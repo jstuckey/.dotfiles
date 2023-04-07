@@ -5,6 +5,8 @@ export EDITOR=vim
 
 set -o vi
 
+bindkey '^R' history-incremental-pattern-search-backward
+
 export CLICOLOR=1
 
 # Aliases
