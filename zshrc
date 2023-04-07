@@ -80,6 +80,15 @@ kweb() {
   kubectl exec -it $web -- bash
 }
 
+kshot() {
+  one_shot="`kubectl get pods | grep ^one-shot | sort -R | head -n 1 |  awk '{print $1}'`"
+  kubectl exec -it $one_shot -- bash
+}
+
+kimg() {
+  kubectl get pods -o custom-columns="CONTAINER:.spec.containers[0].name,IMAGE:.spec.containers[0].image"
+}
+
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
