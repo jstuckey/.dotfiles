@@ -76,8 +76,8 @@ kbash() {
 }
 
 kweb() {
-  web="`kubectl get pods | grep ^web | sort -R | head -n 1 |  awk '{print $1}'`"
-  kubectl exec -it $web bash
+  web="`kubectl get pods | grep web | sort -R | head -n 1 |  awk '{print $1}'`"
+  kubectl exec -it $web -- bash
 }
 
 # z
