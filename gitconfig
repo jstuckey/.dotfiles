@@ -33,7 +33,7 @@
   editor = vim
 [user]
   name = jstuckey
-	email = jeremystuckey@gmail.com
+	email = jstuckey@optoro.com
 [rerere]
 	enabled = true
 [pull]
