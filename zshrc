@@ -129,5 +129,5 @@ echo -e ""
 echo -e "             Welcome, Jeremy!\033[0;35m ノ(º_ºノ)"
 echo -e ""
 
-#export NVM_DIR="$HOME/.nvm"
-#. "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
