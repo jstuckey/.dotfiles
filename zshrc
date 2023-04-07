@@ -72,7 +72,7 @@ kns() {
 }
 
 kbash() {
-  kubectl exec -it $1 bash
+  kubectl exec -it $1 -- bash
 }
 
 kweb() {
