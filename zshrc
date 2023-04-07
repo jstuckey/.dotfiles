@@ -131,3 +131,6 @@ echo -e ""
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
+
+export HELM_REGISTRY_CONFIG="$HOME/.docker/config.json"
+export HELM_EXPERIMENTAL_OCI=1
