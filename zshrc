@@ -43,6 +43,21 @@ agvim() {
   vim $((ag $1 -l --ignore bin/ --ignore db --ignore log) | tr "\n" " ")
 }
 
+openmr() {
+  url_base=$(git remote -v | grep "origin.*(push)" | sed "s/^.*://" | sed "s/\.git.*//")
+  source_branch=$(git rev-parse --abbrev-ref HEAD)
+  target_branch=$(git log --oneline \
+  | cut -f 1 -d' ' \
+  | (while read commit ; do
+       other_branches="$(git branch --contains $commit | egrep -v '^\* ')"
+       if [ -n "${other_branches}" ] ; then
+         echo $other_branches
+         break
+       fi
+     done) | tail -n 1 | sed "s/ //g")
+  open "https://gitlab.com/$url_base/-/merge_requests/new?merge_request%5Bsource_branch%5D=$source_branch&merge_request%5Btarget_branch%5D=$target_branch"
+}
+
 kns() {
   if [[ $1 =~ ^production ]]; then
     kubectl config use-context prod
