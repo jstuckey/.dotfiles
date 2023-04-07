@@ -43,42 +43,6 @@ agvim() {
   vim $((ag $1 -l --ignore bin/ --ignore db --ignore log) | tr "\n" " ")
 }
 
-openmr() {
-  url_base=$(git remote -v | grep "origin.*(push)" | sed "s/^.*://" | sed "s/\.git.*//")
-  source_branch=$(git rev-parse --abbrev-ref HEAD)
-  target_branch=$(git log --oneline \
-  | cut -f 1 -d' ' \
-  | (while read commit ; do
-       other_branches="$(git branch --contains $commit | egrep -v '^\* ')"
-       if [ -n "${other_branches}" ] ; then
-         echo $other_branches
-         break
-       fi
-     done) | tail -n 1 | sed "s/ //g")
-  open "https://gitlab.com/$url_base/-/merge_requests/new?merge_request%5Bsource_branch%5D=$source_branch&merge_request%5Btarget_branch%5D=$target_branch"
-}
-
-kns() {
-  env=`echo $1 | cut -f 1 -d '-'`
-  kubectl config use-context $env
-  kubectl config set-context --current --namespace="$1"
-
-  if [ $env = "production" ]; then
-    PROMPT=$PROD_PROMPT
-  else
-    PROMPT=$NON_PROD_PROMPT
-  fi
-}
-
-kbash() {
-  kubectl exec -it $1 bash
-}
-
-kweb() {
-  web="`kubectl get pods | grep ^web | sort -R | head -n 1 |  awk '{print $1}'`"
-  kubectl exec -it $web bash
-}
-
 # z
 . `brew --prefix`/etc/profile.d/z.sh
 
@@ -100,26 +64,12 @@ prompt_git_branch() {
   fi
 }
 
-prompt_k8s_namespace() {
-  namespace=$(kubectl config view --minify -o jsonpath='{..namespace}')
-  if [ -n "$namespace" ]; then
-    echo "$namespace | "
-  fi
-}
-
 prompt_random_emoji() {
   emojis=(🐶 🐺 🐱 🐭 🐹 🐰 🐸 🐯 🐨 🐻 🐷 🐮 🐵 🐼 🐧 🐍 🐢 🐙 🐠 🐳 🐬 🐥 🦁 🦀 🐝 🐛)
   echo ${emojis[$RANDOM % 26]}
 }
 
-NON_PROD_PROMPT='%F{cyan}$(prompt_basename)$(prompt_git_branch)$(prompt_k8s_namespace)$(prompt_random_emoji) >  %F{white}'
-PROD_PROMPT='%F{red}$(prompt_basename)$(prompt_git_branch)$(prompt_k8s_namespace)⚠️  >  %F{white}'
-
-if [[ $(prompt_k8s_namespace) =~ production ]]; then
-  PROMPT=$PROD_PROMPT
-else
-  PROMPT=$NON_PROD_PROMPT
-fi
+PROMPT='%F{cyan}$(prompt_basename)$(prompt_git_branch)$(prompt_random_emoji) >  %F{white}'
 
 # Welcome
 echo -e ""
