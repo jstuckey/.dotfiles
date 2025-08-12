@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vim-rubyhash"]
 	path = vim/bundle/vim-rubyhash
 	url = git@github.com:rorymckinley/vim-rubyhash.git
+[submodule "vim/bundle/copilot.vim"]
+	path = vim/bundle/copilot.vim
+	url = https://github.com/github/copilot.vim.git
