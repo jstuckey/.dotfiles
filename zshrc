@@ -1,6 +1,3 @@
-export PATH="$HOME/.rbenv/bin:$PATH:/usr/local/sbin"
-eval "$(rbenv init -)"
-
 export EDITOR=vim
 
 set -o vi
@@ -171,6 +168,13 @@ echo -e "\033[0;31m (╯°□°）╯\033[1;33m ︵ \033[0;36m¡ʎɯǝɹǝſ 'ǝ
 echo -e ""
 echo -e "             Welcome, Jeremy!\033[0;35m ノ(º_ºノ)"
 echo -e ""
+
+export PATH="$HOME/.rbenv/bin:$PATH:/usr/local/sbin"
+eval "$(rbenv init -)"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
