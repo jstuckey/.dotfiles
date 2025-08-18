@@ -61,6 +61,12 @@ openmr() {
   open "https://gitlab.com/$url_base/-/merge_requests/new?merge_request%5Bsource_branch%5D=$source_branch&merge_request%5Btarget_branch%5D=$target_branch"
 }
 
+openpr() {
+  repo_name=$(basename $(pwd))
+  branch_name=$(git rev-parse --abbrev-ref HEAD)
+  open "https://github.com/optoro/$repo_name/pull/new/$branch_name"
+}
+
 kns() {
   env=`echo $1 | cut -f 1 -d '-'`
   kubectl config use-context $env
