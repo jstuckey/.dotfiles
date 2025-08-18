@@ -98,24 +98,31 @@ gproxy() {
   if [ -z $1 ]
   then
     echo "Need an environment argument such as staging, sandbox, or production"
-  else
-    case "$1" in
-      bcdr) proxy_port="8885";;
-      testing) proxy_port="8886";;
-      staging) proxy_port="8887";;
-      sandbox) proxy_port="8888";;
-      production) proxy_port="8889";;
-    esac
-
-    zone="us-central1-a"
-    if [ "$1" = "bcdr" ]
-    then
-      zone="us-west1-a"
-    fi
-
-    ps aux | grep ${proxy_port}:localhost:8888 | grep -v grep | awk '{print $2}' | xargs kill
-    gcloud compute ssh bastion-optoro-$1-service --project optoro-$1-service --zone $zone -- -L ${proxy_port}:localhost:8888 -N -q -f
+    return
   fi
+
+  case "$1" in
+    bcdr-sandbox) proxy_port="8884";;
+    bcdr-production) proxy_port="8885";;
+    testing) proxy_port="8886";;
+    staging) proxy_port="8887";;
+    sandbox) proxy_port="8888";;
+    production) proxy_port="8889";;
+  esac
+
+  if [[ $1 == bcdr* ]]
+  then
+    zone="us-west1-a"
+    environment=`echo $1 | sed "s/bcdr-//"`
+    suffix="-us-west1"
+  else
+    zone="us-central1-a"
+    environment=$1
+    suffix=""
+  fi
+
+  ps aux | grep ${proxy_port}:localhost:8888 | grep -v grep | awk '{print $2}' | xargs kill
+  gcloud compute ssh bastion-optoro-$environment-service${suffix} --project optoro-$environment-service --zone $zone -- -L ${proxy_port}:localhost:8888 -N -q -f
 }
 
 alias kproxy="gproxy"
