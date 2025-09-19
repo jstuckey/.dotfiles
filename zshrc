@@ -162,16 +162,6 @@ echo -e ""
 echo -e "             Welcome, Jeremy!\033[0;35m ノ(º_ºノ)"
 echo -e ""
 
-export PATH="$HOME/.rbenv/bin:$PATH:/usr/local/sbin"
-eval "$(rbenv init -)"
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jstuckey/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jstuckey/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -179,5 +169,5 @@ export HELM_REGISTRY_CONFIG="$HOME/.docker/config.json"
 export HELM_EXPERIMENTAL_OCI=1
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-export CLOUDSDK_PYTHON='/Users/jstuckey/.pyenv/shims/python'
+#export CLOUDSDK_PYTHON='/Users/jstuckey/.pyenv/shims/python'
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
