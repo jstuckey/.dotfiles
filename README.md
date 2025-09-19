@@ -12,12 +12,8 @@ ln -s ~/.dotfiles/tmux ~/.tmux.conf
 ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 
 # vim plugins
+cd vim/bundle
 git submodule update --init
-
-# rbenv
-git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-cd ~/.rbenv && src/configure && make -C src
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 # home / end keys
 mkdir ~/Library/KeyBindings
