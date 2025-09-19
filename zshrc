@@ -147,13 +147,26 @@ prompt_git_branch() {
     echo "$branch | "
   fi
 }
+prompt_k8s_namespace() {
+  namespace=$(kubectl config view --minify -o jsonpath='{..namespace}')
+  if [ -n "$namespace" ]; then
+    echo "$namespace | "
+  fi
+}
 
 prompt_random_emoji() {
   emojis=(🐶 🐺 🐱 🐭 🐹 🐰 🐸 🐯 🐨 🐻 🐷 🐮 🐵 🐼 🐧 🐍 🐢 🐙 🐠 🐳 🐬 🐥 🦁 🦀 🐝 🐛)
   echo ${emojis[$RANDOM % 26]}
 }
 
-PROMPT='%F{cyan}$(prompt_basename)$(prompt_git_branch)$(prompt_random_emoji) >  %F{white}'
+NON_PROD_PROMPT='%F{cyan}$(prompt_basename)$(prompt_git_branch)$(prompt_k8s_namespace)$(prompt_random_emoji) >  %F{white}'
+PROD_PROMPT='%F{red}$(prompt_basename)$(prompt_git_branch)$(prompt_k8s_namespace)⚠️  >  %F{white}'
+
+if [[ $(prompt_k8s_namespace) =~ production ]]; then
+  PROMPT=$PROD_PROMPT
+else
+  PROMPT=$NON_PROD_PROMPT
+fi
 
 # Welcome
 echo -e ""
