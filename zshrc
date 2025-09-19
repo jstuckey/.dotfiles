@@ -162,12 +162,9 @@ echo -e ""
 echo -e "             Welcome, Jeremy!\033[0;35m ノ(º_ºノ)"
 echo -e ""
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jstuckey/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jstuckey/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
 export HELM_REGISTRY_CONFIG="$HOME/.docker/config.json"
 export HELM_EXPERIMENTAL_OCI=1
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-#export CLOUDSDK_PYTHON='/Users/jstuckey/.pyenv/shims/python'
 export CLOUDSDK_PYTHON_SITEPACKAGES=1
+export PATH=$PATH:/opt/homebrew/share/google-cloud-sdk/bin
