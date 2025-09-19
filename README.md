@@ -12,6 +12,7 @@ ln -s ~/.dotfiles/tmux ~/.tmux.conf
 ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 
 # vim plugins
+cd vim/bundle
 git submodule update --init
 
 # home / end keys
