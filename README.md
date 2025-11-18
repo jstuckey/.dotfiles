@@ -19,3 +19,7 @@ git submodule update --init
 mkdir ~/Library/KeyBindings
 ln -s ~/.dotfiles/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
 ````
+
+# disable press and hold
+defaults write com.apple.Terminal ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
