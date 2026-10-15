@@ -160,3 +160,12 @@ endfunction
 nnoremap <silent> <leader>gh :call OpenLineOnGitHub()<CR>
 xnoremap <silent> <leader>gh :call OpenLineOnGitHub()<CR>
 
+"""""""""""""""""""""
+" Prettier autosave "
+"""""""""""""""""""""
+let g:prettier#autoformat = 0
+
+augroup Prettier
+  autocmd!
+  autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css Prettier
+augroup END
