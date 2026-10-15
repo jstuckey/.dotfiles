@@ -43,3 +43,9 @@
 [submodule "vim/bundle/vim-jsx-pretty"]
 	path = vim/bundle/vim-jsx-pretty
 	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "vim/bundle/copilot.vim"]
+	path = vim/bundle/copilot.vim
+	url = git@github.com:github/copilot.vim.git
+[submodule "vim/bundle/vim-prettier"]
+	path = vim/bundle/vim-prettier
+	url = git@github.com:prettier/vim-prettier.git
