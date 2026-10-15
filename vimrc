@@ -6,6 +6,7 @@ filetype plugin indent on
 " Colors "
 """"""""""
 syntax on
+set re=0 " disable slow syntax regex
 colorscheme jerokai
 
 """""""""""
