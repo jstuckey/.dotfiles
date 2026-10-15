@@ -104,7 +104,7 @@ command! Yall 0,$y *
 """""""""""""""""""
 
 " FZF fuzzy finding
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 nmap <Leader>f :FZF<CR>
 
 " Add matchit plugin
