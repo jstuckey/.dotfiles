@@ -22,16 +22,17 @@ alias vimprune='find . -name ".*.sw*" -print0 | xargs -0 rm'
 alias cls='git log | head -n 1 | sed "s/commit //" | pbcopy' # Copy last SHA
 alias cop='git diff --name-only HEAD develop | xargs bundle exec rubocop'
 alias pickbr='git branch | pick | xargs git checkout'
-alias conflicts='vim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
+alias conflicts='nvim $(git diff --name-only --diff-filter=U | tr "\n" " ")'
 alias k='kubectl'
 alias stamp='date -u +%Y.%m.%d.%H.%M.%S'
 alias o='TMUX=  overmind'
+alias vim='nvim'
 
 # Functions
 
 # Search for files containing a term in a Rails directory and open those files in Vim's args list
 agvim() {
-  vim $((ag $1 -l --ignore bin/ --ignore db --ignore log) | tr "\n" " ")
+  nvim $((ag $1 -l --ignore bin/ --ignore db --ignore log) | tr "\n" " ")
 }
 
 # z

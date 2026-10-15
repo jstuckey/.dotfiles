@@ -8,6 +8,7 @@ ln -s ~/.dotfiles/inputrc ~/.inputrc
 ln -s ~/.dotfiles/gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/vimrc ~/.vimrc
 ln -s ~/.dotfiles/vim ~/.vim
+ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 
