@@ -126,3 +126,37 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 """""""""""""""
 iab credentails credentials
 iab cateogry category
+
+"""""""""""""""""""""""
+" Open file in GitHub "
+"""""""""""""""""""""""
+
+function! OpenLineOnGitHub() range abort
+  " Repo root and the current file's path relative to it
+  let l:root = trim(system('git -C ' . shellescape(expand('%:p:h')) . ' rev-parse --show-toplevel'))
+  if v:shell_error
+    echoerr 'Not inside a git repository'
+    return
+  endif
+  let l:relpath = substitute(expand('%:p'), '^' . escape(l:root, '/\') . '/', '', '')
+
+  " Parse the origin remote into a github repo path (handles ssh + https forms)
+  let l:remote = trim(system('git -C ' . shellescape(l:root) . ' remote get-url origin'))
+  let l:repo = substitute(l:remote, '^.*github\.com[:/]', '', '')
+  let l:repo = substitute(l:repo, '\.git$', '', '')
+
+  " a:firstline == a:lastline in normal mode; they span the selection in visual mode
+  let l:anchor = '#L' . a:firstline
+  if a:lastline != a:firstline
+    let l:anchor .= '-L' . a:lastline
+  endif
+
+  let l:url = 'https://github.com/' . l:repo . '/blob/master/' . l:relpath . l:anchor
+
+  call system('open ' . shellescape(l:url))
+  echo l:url
+endfunction
+
+nnoremap <silent> <leader>gh :call OpenLineOnGitHub()<CR>
+xnoremap <silent> <leader>gh :call OpenLineOnGitHub()<CR>
+
